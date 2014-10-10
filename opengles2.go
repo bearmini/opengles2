@@ -86,10 +86,10 @@ func BlendColor(
 	red Clampf, green Clampf,
 	blue Clampf, alpha Clampf) {
 	C.glBlendColor(
-		C.GLclampf(red),
-		C.GLclampf(green),
-		C.GLclampf(blue),
-		C.GLclampf(alpha))
+		C.GLfloat(C.GLclampf(red)),
+		C.GLfloat(C.GLclampf(green)),
+		C.GLfloat(C.GLclampf(blue)),
+		C.GLfloat(C.GLclampf(alpha)))
 
 }
 func BlendEquation(
@@ -152,16 +152,16 @@ func ClearColor(
 	red Clampf, green Clampf,
 	blue Clampf, alpha Clampf) {
 	C.glClearColor(
-		C.GLclampf(red),
-		C.GLclampf(green),
-		C.GLclampf(blue),
-		C.GLclampf(alpha))
+		C.GLfloat(C.GLclampf(red)),
+		C.GLfloat(C.GLclampf(green)),
+		C.GLfloat(C.GLclampf(blue)),
+		C.GLfloat(C.GLclampf(alpha)))
 
 }
 func ClearDepthf(
 	depth Clampf) {
 	C.glClearDepthf(
-		C.GLclampf(depth))
+		C.GLfloat(C.GLclampf(depth)))
 
 }
 func ClearStencil(
@@ -306,8 +306,8 @@ func DepthMask(
 func DepthRangef(
 	zNear Clampf, zFar Clampf) {
 	C.glDepthRangef(
-		C.GLclampf(zNear),
-		C.GLclampf(zFar))
+		C.GLfloat(C.GLclampf(zNear)),
+		C.GLfloat(C.GLclampf(zFar)))
 
 }
 func DetachShader(
@@ -664,7 +664,7 @@ func RenderbufferStorage(
 func SampleCoverage(
 	value Clampf, invert bool) {
 	C.glSampleCoverage(
-		C.GLclampf(value),
+		C.GLfloat(C.GLclampf(value)),
 		glBoolean(invert))
 }
 func Scissor(
